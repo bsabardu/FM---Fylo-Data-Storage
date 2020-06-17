@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -17,27 +18,39 @@
 
   <div class="content">
 
-  <div class="menu">
-    <div class="logo">
-    <img src="/images/logo.svg" alt="logo" srcset="">
-  </div>
-  <div class="tools">
-    <div class="item"><i class="icon i-document"></i></div>
-    <div class="item"><i class="icon i-folder"></i></div>
-    <div class="item"><i class="icon i-upload"></i></div>
-    
-    
-  </div>
-  </div>
+    <div class="menu">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="logo" srcset="">
+      </div>
+      <div class="tools">
+        <div class="item"><i class="icon i-document"></i></div>
+        <div class="item"><i class="icon i-folder"></i></div>
+        <div class="item"><i class="icon i-upload"></i></div>
+      </div>
+    </div>
+    <div class="info">
 
 
+      <div class="usage">
+        <div class="container">
+          <div class="gauge-container">
+            <p>You’ve used <strong>815 GB</strong> of your storage</p>
+            <div class="gauge">
+              <div class="gauge-a"></div>
+              <div class="gauge-b"></div>
+            </div>
+            <div class="scale">
+              <div class="scale-item">0 GB</div>
+              <div class="scale-item">1000 GB</div>
+            </div>
+          </div>
+        </div>
 
-    You’ve used 815 GB of your storage
+        <div class="left">185 <span>GB LEFT</span></div>
+      </div>
+    </div>
 
-    185 GB Left
 
-    0 GB
-    1000 GB
 
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
