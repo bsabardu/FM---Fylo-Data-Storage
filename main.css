@@ -1,69 +1,112 @@
+/*
 @media (min-width: 601px) {
-    body {
-        background: url('images/bg-desktop.svg') ;
-        background-size: 100%;
-    }
+body {
+    background: url('images/bg-desktop.svg') no-repeat bottom;
+    background-color: hsl(229, 57%, 11%);
 }
-
-@media (max-width: 600px) {
-    body {
-        background: url('images/bg-mobile.svg') repeat-x;
-        background-size: 100%;
-    }
+.main {
+    background-size: 100%;
+    background-position: bottom;
 }
+}
+*/
 
-body{
+body {
+    background: url('images/bg-mobile.svg') repeat-x;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     color: white;
     font-size: 14px;
-
 }
 
-.menu {
+.content-block {
     background-color: hsl(228, 56%, 26%);
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 25px 5px;
+    padding: 40px;
 }
 
-.container {
-    background-color: hsl(228, 56%, 26%);
+.inner {
+    margin: 0 auto;
 }
 
-.gauge-container{
+.tools {
+    display: flex;
+    justify-content: start;
+    vertical-align: middle;
+    flex-direction: row;
+}
+
+.item {
+    background-color: hsl(229, 57%, 11%);
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.info {
+    display: inline-block;
+    justify-content: center;
+}
+
+.gauge:before {
+    display: block;
+    content: '';
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     width: 80%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.circle {
+    position: relative;
+    display: block;
+    content: '';
+    background: white;
+    top: -19px;
+    left: 242px;
+    width: 18px;
+    height: 18px;
+    border-radius: 100px;
 }
 
 .gauge {
-    display: inline-block;
-    margin: 0 20%;
-}
-.gauge-a {
     background-color: hsl(229, 57%, 11%);
     width: 100%;
-    height: 10px;
-    display: inline-block;
+    height: 20px;
+    border-radius: 100px;
+    margin: 5px 0;
+    padding: 4px;
 }
 
-.gauge-b{
-    background-color: hsl(229, 57%, 11%);
-    width: 100%;
-    height: 10px;
-    display: inline-block;
+.gauge-container p {
+    text-align: center;
 }
-
 
 .left {
-    background-color : white;
+    background-color: white;
     color: hsl(229, 57%, 11%);
     font-size: 2rem;
     font-weight: 700;
+    height: 72px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.left > span {
+.left>span {
     color: hsl(243, 100%, 93%);
-    font-size : 0.5em;
-    
+    font-size: 0.5em;
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
@@ -71,17 +114,6 @@ footer {
     width: 100%;
     bottom: 0;
     padding-bottom: 2vw;
-}
-
-.item {
-    background-color: hsl(229, 57%, 11%);
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    margin: 5px;
-    padding:5px;
-    border-radius: 8px;
-
 }
 
 .icon {
@@ -108,6 +140,8 @@ footer {
 .attribution {
     font-size: 11px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
 }
 
 .attribution a {
