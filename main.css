@@ -11,7 +11,7 @@ body {
 }
 */
 
-body {
+* body {
     background: url('images/bg-mobile.svg') repeat-x;
     background-size: 100%;
     display: flex;
@@ -23,27 +23,80 @@ body {
     font-size: 14px;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main>* {
+    width: calc(100%-260px);
+    margin-bottom: 20px;
+}
+
+.container-grid-icon {
+    display: flex;
+    flex-direction: row;
+    margin-left: -16px;
+}
+
+.container-grid-icon>* {
+    margin-left: 16px;
+}
+
 .content-block {
     background-color: hsl(228, 56%, 26%);
-    width: 100%;
     border-radius: 10px;
-    margin: 25px 5px;
     padding: 40px;
 }
 
-.inner {
-    margin: 0 auto;
+ul.icons-set {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    list-style: none;
+    padding-inline-start: 0px;
 }
 
-.tools {
+ul.icons-set li {
     display: flex;
-    justify-content: start;
-    vertical-align: middle;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a.iconli {
+    font-size: 2em;
+    line-height: 1em;
+    padding: 16px;
+    background: hsl(229, 57%, 11%);
+    border-radius: 8px;
+    color: #fff;
+    margin-right: 16px;
+}
+
+i {
+    display: inline-block;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+}
+
+.i-document {
+    background: url(images/icon-document.svg) 0 0 no-repeat;
+    background-size: 24px;
+}
+
+.i-folder {
+    background: url(images/icon-folder.svg) 0 0 no-repeat;
+    background-size: 24px;
+}
+
+.i-upload {
+    background: url(images/icon-upload.svg) 0 0 no-repeat;
+    background-size: 24px;
 }
 
 .item {
-    background-color: hsl(229, 57%, 11%);
     width: 48px;
     height: 48px;
     display: inline-block;
@@ -114,27 +167,6 @@ footer {
     width: 100%;
     bottom: 0;
     padding-bottom: 2vw;
-}
-
-.icon {
-    background-size: 100%;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.i-document {
-    background: url(images/icon-document.svg) 0 0 no-repeat;
-}
-
-.i-folder {
-    background: url(images/icon-folder.svg) 0 0 no-repeat;
-}
-
-.i-upload {
-    background: url(images/icon-upload.svg) 0 0 no-repeat;
 }
 
 .attribution {
