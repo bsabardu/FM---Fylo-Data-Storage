@@ -64,10 +64,8 @@ ul.icons-set li {
     align-items: center;
 }
 
-a.iconli {
-    font-size: 2em;
-    line-height: 1em;
-    padding: 16px;
+.iconli {
+    padding: 12px;
     background: hsl(229, 57%, 11%);
     border-radius: 8px;
     color: #fff;
@@ -76,31 +74,29 @@ a.iconli {
 
 i {
     display: inline-block;
-    margin: auto;
     width: 24px;
     height: 24px;
 }
 
 .i-document {
-    background: url(images/icon-document.svg) 0 0 no-repeat;
-    background-size: 24px;
+    background: url(images/icon-document.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position-y: center;
 }
 
 .i-folder {
-    background: url(images/icon-folder.svg) 0 0 no-repeat;
-    background-size: 24px;
+    background: url(images/icon-folder.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position-y: center;
 }
 
 .i-upload {
-    background: url(images/icon-upload.svg) 0 0 no-repeat;
-    background-size: 24px;
-}
-
-.item {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    border-radius: 8px;
+    background: url(images/icon-upload.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position-y: center;
 }
 
 .info {
