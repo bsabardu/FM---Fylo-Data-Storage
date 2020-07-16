@@ -47,6 +47,8 @@ body {
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
     padding: 40px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 ul.icons-set {
@@ -143,12 +145,21 @@ i {
     color: hsl(229, 57%, 11%);
     font-size: 2rem;
     font-weight: 700;
-    height: 72px;
+    height: 64px;
+    padding:0px;
+    margin-top: -48px;
+    margin-left: 96px;
+    margin-right: 96px;
     text-align: center;
-    vertical-align: middle;
+    display: inline-block;
 }
 
-.left>span {
+.inner {
+    vertical-align: bottom;
+    height: auto;
+}
+
+.inner>span {
     color: hsl(243, 100%, 93%);
     font-size: 0.5em;
 }
