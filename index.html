@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;800&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -18,7 +18,7 @@
 <body>
     <div class="main">
         <div class="content-block menu-content">
-            <img src="/images/logo.svg" alt="logo" srcset="">
+            <img src="/images/logo.svg" alt="logo" class="logo">
             <section class="icons">
                 <ul class="icons-set">
                     <li class="iconli"><i class="i-document"></i></li>
@@ -28,7 +28,8 @@
             </section>
         </div>
 
-        <div class="content-block">
+        <div class="wrapper">
+        <div class="content-block gauge-block">
             <div class="gauge-container">
                 <p>You’ve used <strong>815 GB</strong> of your storage</p>
                 <div class="gauge">
@@ -40,12 +41,15 @@
                 <div class="scale-item">1000 GB</div>
             </div>
         </div>
-        <div class="content-block left"><div class="inner">185 <span>GB LEFT</div></span></div>
+        <div class="content-block left">
+            <div class="item-1">185 </div><div class="item-2">GB LEFT</div>
+        </div>
+    </div>
 
+    </div>
 
-
-        <footer class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Benjamin Sabardu</a>.
+        <footer>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="http://bensab.fr">Benjamin Sabardu</a>.
         </footer>
 
     </div>

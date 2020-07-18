@@ -1,37 +1,34 @@
-/*
-@media (min-width: 601px) {
 body {
-    background: url('images/bg-desktop.svg') no-repeat bottom;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+    color: white;
+    font-size: 14px;
     background-color: hsl(229, 57%, 11%);
+
 }
-.main {
-    background-size: 100%;
-    background-position: bottom;
-}
-}
-*/
+
 
 * body {
-    background: url('images/bg-mobile.svg') repeat-x;
+
+    /* background: url('images/bg-mobile.svg') repeat-x; */
     background-size: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    color: white;
-    font-size: 14px;
+    justify-content: center;
+
 }
 
 .main {
     display: flex;
-    flex-direction: column;
+    align-items: stretch;
 }
 
-.main>* {
-    width: calc(100%-260px);
-    margin-bottom: 20px;
-}
+
 
 .container-grid-icon {
     display: flex;
@@ -49,6 +46,18 @@ body {
     padding: 40px;
     margin-left: 24px;
     margin-right: 24px;
+}
+
+.menu-content {
+    border-top-right-radius: 100px
+}
+
+.gauge-block {
+    padding-bottom:48px
+}
+
+.logo {
+    margin-bottom: 20px;
 }
 
 ul.icons-set {
@@ -120,48 +129,56 @@ i {
     display: block;
     content: '';
     background: white;
-    top: -19px;
-    left: 242px;
-    width: 18px;
-    height: 18px;
+    top: -13px;
+    left: calc(80% - 14px);
+    width: 12px;
+    height: 12px;
     border-radius: 100px;
 }
 
 .gauge {
     background-color: hsl(229, 57%, 11%);
     width: 100%;
-    height: 20px;
+    height: 14px;
     border-radius: 100px;
     margin: 5px 0;
-    padding: 4px;
+    padding: 3px;
 }
 
 .gauge-container p {
     text-align: center;
+    margin-bottom: 16px;
 }
+
+.gauge-container strong {
+    font-weight: 500;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+}  
 
 .left {
+    align-self: center;
     background-color: white;
-    color: hsl(229, 57%, 11%);
-    font-size: 2rem;
+    padding:16px 24px;
+    display: flex;
     font-weight: 700;
-    height: 64px;
-    padding:0px;
-    margin-top: -48px;
-    margin-left: 96px;
-    margin-right: 96px;
-    text-align: center;
-    display: inline-block;
+    align-items: center;
 }
 
-.inner {
-    vertical-align: bottom;
-    height: auto;
+.item-1 {
+    color: hsl(229, 57%, 11%);
+    font-size: 3rem;
+    
 }
 
-.inner>span {
-    color: hsl(243, 100%, 93%);
-    font-size: 0.5em;
+.item-2 {
+    color: rgb(146,146,153);
+    margin-left:8px;
+    letter-spacing: 0.05rem;
 }
 
 .scale {
@@ -170,19 +187,98 @@ i {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     padding-bottom: 2vw;
-}
-
-.attribution {
     font-size: 11px;
     text-align: center;
-    position: fixed;
+    height: 24px;
     bottom: 0;
+    margin:0px
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+footer a {
+    color: #FFF;
+}
+
+
+/* CSS for desktop */
+@media (min-width: 601px) {
+    body {
+        /* background: url('images/bg-desktop.svg') no-repeat bottom; */
+        display: flex;
+        align-items: center;
+    }
+
+    .main {
+        background-size: 100%;
+        background-position: bottom;
+        flex-direction: row;
+        width: 920px;
+    }
+
+    .content-block {
+        align-items: center;
+
+    }
+
+    .menu-content{
+        flex-grow: 1;
+    }
+
+    .gauge-block {
+        margin-top: -25px;
+    }
+
+    .gauge-container p {
+        text-align: left;
+    }
+
+    .wrapper {
+        flex-grow: 2;
+        width: 1000px;
+    }
+
+    .left {
+    order:-1;
+    z-index:1;
+    align-self: flex-end;
+    margin-right: 40px;
+    }
+
+    .left:after{
+        display: block;
+        content: '';
+    }
+}
+
+
+/* CSS for mobile */
+@media (max-width: 600px){
+
+* body {
+
+    background: url('images/bg-mobile.svg') repeat-x;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.main {
+    flex-direction: column;
+}
+
+.main>* {
+    width: calc(100%-260px);
+    margin-bottom: 16px;
+}
+
+.left{
+    margin-top: -48px;
+}
+
 }
