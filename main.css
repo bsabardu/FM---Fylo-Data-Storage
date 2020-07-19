@@ -8,27 +8,21 @@ body {
     color: white;
     font-size: 14px;
     background-color: hsl(229, 57%, 11%);
-
 }
 
-
 * body {
-
     /* background: url('images/bg-mobile.svg') repeat-x; */
     background-size: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-
 }
 
 .main {
     display: flex;
     align-items: stretch;
 }
-
-
 
 .container-grid-icon {
     display: flex;
@@ -53,7 +47,7 @@ body {
 }
 
 .gauge-block {
-    padding-bottom:48px
+    padding-bottom: 48px
 }
 
 .logo {
@@ -158,12 +152,12 @@ i {
     display: flex;
     flex-direction: column;
     flex-grow: 4;
-}  
+}
 
 .left {
     align-self: center;
     background-color: white;
-    padding:16px 24px;
+    padding: 16px 24px;
     display: flex;
     font-weight: 700;
     align-items: center;
@@ -172,12 +166,11 @@ i {
 .item-1 {
     color: hsl(229, 57%, 11%);
     font-size: 3rem;
-    
 }
 
 .item-2 {
-    color: rgb(146,146,153);
-    margin-left:8px;
+    color: rgb(146, 146, 153);
+    margin-left: 8px;
     letter-spacing: 0.05rem;
 }
 
@@ -195,7 +188,7 @@ footer {
     text-align: center;
     height: 24px;
     bottom: 0;
-    margin:0px
+    margin: 0px
 }
 
 footer a {
@@ -204,81 +197,78 @@ footer a {
 
 
 /* CSS for desktop */
+
 @media (min-width: 601px) {
     body {
-        /* background: url('images/bg-desktop.svg') no-repeat bottom; */
+        /*  */
         display: flex;
         align-items: center;
     }
-
     .main {
         background-size: 100%;
         background-position: bottom;
         flex-direction: row;
         width: 920px;
     }
-
     .content-block {
         align-items: center;
-
     }
-
-    .menu-content{
-        flex-grow: 1;
+    .menu-content {
+        width: 30%;
+        max-width: 340px;
     }
-
     .gauge-block {
         margin-top: -25px;
     }
-
     .gauge-container p {
         text-align: left;
     }
-
-    .wrapper {
-        flex-grow: 2;
-        width: 1000px;
+    .wrapper {
+        max-width: 540px;
+        width: 100%;
     }
-
     .left {
-    order:-1;
-    z-index:1;
-    align-self: flex-end;
-    margin-right: 40px;
+        order: -1;
+        z-index: 1;
+        align-self: flex-end;
+        margin-right: 40px;
     }
-
-    .left:after{
-        display: block;
+    .left::after {
         content: '';
+        position: relative;
+        border: 10px solid #FFF;
+        top: 85%;
+        right: -24px;
+        border-top: 20px solid #ffffff;
+        border-right: 20px solid #ffffff;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid transparent;
     }
 }
 
 
 /* CSS for mobile */
-@media (max-width: 600px){
 
-* body {
-
-    background: url('images/bg-mobile.svg') repeat-x;
-    background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-}
-
-.main {
-    flex-direction: column;
-}
-
-.main>* {
-    width: calc(100%-260px);
-    margin-bottom: 16px;
-}
-
-.left{
-    margin-top: -48px;
-}
-
+@media (max-width: 600px) {
+    * body {
+        background: url('images/bg-mobile.svg') repeat-x;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .main>* {
+        width: calc(100%-260px);
+        margin-bottom: 16px;
+    }
+    .left {
+        margin-top: -48px;
+    }
+    .gauge-block {
+        padding-bottom: 72px;
+    }
 }
