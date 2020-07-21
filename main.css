@@ -231,7 +231,7 @@ footer a {
         z-index:1;
         align-self: flex-end;
         margin-right: 40px;
-        }
+    }
 
     .item-1 {
         font-size: 2.5em;
@@ -256,6 +256,7 @@ footer a {
         align-items: center;
         margin-left: 1vw;
         margin-right: 1vw;
+    }
 
     .gauge-block {
         margin-top: -16px;
@@ -277,38 +278,38 @@ footer a {
         content: '';
         }
 
-
+    }
 /* CSS for mobile */
 @media (max-width: 600px){
 
-* body {
+    * body {
 
-    background: url('images/bg-mobile.svg') repeat-x;
-    background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+        background: url('images/bg-mobile.svg') repeat-x;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
 
-}
+    .main {
+        flex-direction: column;
+    }
 
-.main {
-    flex-direction: column;
-}
+    .main>* {
+        margin-bottom: 16px;
+    }
 
-.main>* {
-    margin-bottom: 16px;
-}
+    .menu-content{
+        width: calc(94vw - 80px);
+    }
 
-.menu-content{
-    width: calc(94vw - 80px);
-}
+    .wrapper{
+        width: 94vw;
+    }
 
-.wrapper{
-    width: 94vw;
-}
+    .left{
+        margin-top: -36px;
+    }
 
-.left{
-    margin-top: -36px;
-}
 }
