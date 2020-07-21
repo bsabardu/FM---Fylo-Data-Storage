@@ -37,14 +37,13 @@ body {
 .content-block {
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
-    padding: 40px 4vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    padding: 40px;
 }
 
 .menu-content {
     width: 25vw;
     border-top-right-radius: 100px;
+    min-width: 200px;
 }
 
 .gauge-block {
@@ -162,6 +161,7 @@ i {
     display: flex;
     font-weight: 700;
     align-items: center;
+    border-radius: 10px;
 }
 
 .item-1 {
@@ -197,8 +197,7 @@ footer a {
     color: #FFF;
 }
 
-/* CSS for desktop */
-@media (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 800px) {
     body {
         /* background: url('images/bg-desktop.svg') no-repeat bottom; */
         display: flex;
@@ -209,32 +208,75 @@ footer a {
         background-size: 100%;
         background-position: bottom;
         flex-direction: row;
-        width: 920px;
+        width: 96vw;
+        margin: 0 2vw;
+    }
+
+    .main > * {
+        margin: 0 2
+    }
+    
+    .content-block {
+        padding: 30px 20px;
+        align-items: center;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    .wrapper {
+        margin: 0 20px;
+    }
+
+    .gauge-block {
+        margin-top: -16px;
+    }
+    .left {
+        order:-1;
+        z-index:1;
+        align-self: flex-end;
+        margin-right: 40px;
+        }
+
+    .item-1 {
+        font-size: 2.5em;
+    }
+
+    .item-2 {
+        font-size: 0.8em;
+    }
+}
+
+/* CSS for desktop */
+@media (min-width: 801px) {
+
+    .main {
+        max-width: 920px;
+        margin: auto;
+        width: 96vw;
+
     }
 
     .content-block {
         align-items: center;
-
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 
     .gauge-block {
-        margin-top: -25px;
+        margin-top: -16px;
     }
 
     .gauge-container p {
         text-align: left;
     }
 
-    .wrapper {
-        width: 75%;
-    }
-
     .left {
-    order:-1;
-    z-index:1;
-    align-self: flex-end;
-    margin-right: 40px;
-    }
+        order:-1;
+        z-index:1;
+        align-self: flex-end;
+        margin-right: 40px;
+        }
+
 
     .left:after{
         display: block;
@@ -262,20 +304,20 @@ footer a {
 }
 
 .main>* {
-    width: calc(100%-260px);
     margin-bottom: 16px;
 }
 
 .menu-content{
-    width: 98vw;
+    width: calc(94vw - 80px);
 }
 
 .wrapper{
-    width: 98vw;
+    width: 94vw;
 }
 
 .left{
-    margin-top: -48px;
+    margin-top: -36px;
 }
+
 
 }
