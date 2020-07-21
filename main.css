@@ -62,6 +62,7 @@ body {
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
     padding: 40px;
+    box-shadow: 0px 23px 60px 0px hsl(229, 57%, 11%);
 }
 
 .menu-content {
