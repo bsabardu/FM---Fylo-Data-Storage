@@ -1,3 +1,24 @@
+@keyframes circleLoading {
+    0% {
+        left: calc(0% - 14px);
+    }
+
+    100%{
+        left: calc(80% - 14px);
+    }
+  }
+
+  @keyframes gaugeLoading {
+    0% {
+      width: 0%;
+    }
+
+    100%{
+      width: 80%;
+    }
+  }
+
+
 html, body {
     height: 100%; width: 100%;
     padding:0; margin:0;
@@ -114,6 +135,7 @@ i {
 }
 
 .gauge:before {
+    animation: 1s ease-out 0s normal none gaugeLoading;
     display: block;
     content: '';
     background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
@@ -123,11 +145,12 @@ i {
 }
 
 .circle {
+    animation: 1s ease-out 0s normal none circleLoading;
     position: relative;
     display: block;
     content: '';
     background: white;
-    top: -13px;
+    top: -13.5px;
     left: calc(80% - 14px);
     width: 12px;
     height: 12px;
